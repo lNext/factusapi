@@ -1,4 +1,4 @@
-import factusService from "../service/FactusService.js";
+import createRequestService from "../service/CreateRequestService.js";
 
 export const get = async (req, res) => {
   const songInfo = {
@@ -7,7 +7,7 @@ export const get = async (req, res) => {
   };
 
   try {
-    const lyrics = await factusService.get(songInfo);
+    const lyrics = await createRequestService.get(songInfo);
     res.json({ data: lyrics });
   } catch (error) {
     console.error(error);

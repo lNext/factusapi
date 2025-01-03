@@ -1,5 +1,5 @@
 import axios from "axios";
-class FactusService {
+class CreateRequestService {
   async get(songInfo) {
     const { artistName, songName } = songInfo;
     const url = `${process.env.EXTERNAL_API_BASE_URL}${artistName}/${songName}`;
@@ -13,4 +13,4 @@ class FactusService {
   }
 }
 
-export default new FactusService();
+export default new CreateRequestService();

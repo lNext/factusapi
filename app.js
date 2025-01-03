@@ -1,5 +1,5 @@
 import express from "express";
-import factusRoutes from "./routes/factusRoutes.js";
+import mainRoutes from "./routes/mainRoutes.js";
 
 import * as dotenv from "dotenv";
 
@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/api", factusRoutes);
+app.use("/api", mainRoutes);
 app.use((req, res, next) => {
   res.status(404).json({
     message: "Ruta no encontrada",
