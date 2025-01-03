@@ -7,8 +7,8 @@ export const get = async (req, res) => {
   };
 
   try {
-    const lyrics = await createRequestService.get(songInfo);
-    res.json({ data: lyrics });
+    const apiData = await createRequestService.get(songInfo);
+    res.json({ data: apiData });
   } catch (error) {
     console.error(error);
     res
