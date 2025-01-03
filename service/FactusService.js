@@ -2,7 +2,7 @@ import axios from "axios";
 class FactusService {
   async get(songInfo) {
     const { artistName, songName } = songInfo;
-    const url = `${process.env.API_BASE_URL}${artistName}/${songName}`;
+    const url = `${process.env.EXTERNAL_API_BASE_URL}${artistName}/${songName}`;
 
     try {
       const response = await axios.get(url);

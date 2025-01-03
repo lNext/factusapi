@@ -1,7 +1,7 @@
-import express from 'express';
-import { get } from '../controller/FactusController.js';
+import express from "express";
+import { get } from "../controller/FactusController.js";
 const router = express.Router();
 
-router.get('/', get);
+router.get("/", get);
 
 export default router;
